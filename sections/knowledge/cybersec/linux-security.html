@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A principles-driven guide to setting up a secure Linux environment, focusing on hardening concepts, access control, and system resilience." />
+
+  <title>Setting Up a Secure Linux Environment — Nova Digital Knowledge</title>
+
+  <!-- Base & Section Styles -->
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/style1.css">
+
+  <!-- Article-specific styles -->
+  <link rel="stylesheet" href="../../assets/css/article.css">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+<article class="knowledge-article">
+
+  <!-- Header -->
+  <header class="article-header">
+    <h1>Setting Up a Secure Linux Environment</h1>
+    <p class="article-subtitle">
+      Designing resilient systems through deliberate configuration and control
+    </p>
+  </header>
+
+  <!-- Overview -->
+  <section>
+    <h2>Overview</h2>
+    <p>
+      A secure Linux environment is not the result of a single configuration change,
+      but a series of deliberate decisions that shape how the system behaves under
+      normal and adversarial conditions. Linux’s flexibility is a strength, but it
+      also places responsibility for security firmly on the administrator.
+    </p>
+    <p>
+      This article outlines essential principles and practices for establishing a
+      secure Linux environment, focusing on foundational concepts rather than
+      distribution-specific commands or tools.
+    </p>
+  </section>
+
+  <!-- Why It Matters -->
+  <section>
+    <h2>Why a Secure Linux Environment Matters</h2>
+    <p>
+      Linux systems frequently host sensitive workloads such as web services,
+      databases, CI/CD pipelines, and internal tooling. They are attractive targets
+      because misconfigurations are common and privilege boundaries are often
+      misunderstood.
+    </p>
+
+    <ul>
+      <li>Exposure of network-facing services</li>
+      <li>Default or weak configurations</li>
+      <li>Poorly managed privilege boundaries</li>
+      <li>Hidden risks introduced by automation</li>
+    </ul>
+
+    <p>
+      A hardened Linux environment reduces attack surface, enforces predictable
+      behavior, and limits the impact of compromise.
+    </p>
+  </section>
+
+  <!-- Foundational Principles -->
+  <section>
+    <h2>Foundational Principles</h2>
+
+    <details>
+      <summary>Minimalism</summary>
+      <p>
+        Fewer packages, services, and libraries mean fewer attack paths. Minimal
+        systems are easier to audit, maintain, and secure.
+      </p>
+    </details>
+
+    <details>
+      <summary>Strong Identity and Access Controls</summary>
+      <p>
+        Authentication and authorization define who can do what. Weak credentials
+        undermine every other defensive measure.
+      </p>
+    </details>
+
+    <details>
+      <summary>Defense in Depth</summary>
+      <p>
+        Security relies on multiple overlapping controls—permissions, filtering,
+        monitoring, and isolation—working together.
+      </p>
+    </details>
+
+    <details>
+      <summary>Predictability</summary>
+      <p>
+        Consistent configuration and documented changes reduce uncertainty and limit
+        opportunities for attackers.
+      </p>
+    </details>
+  </section>
+
+  <!-- Hardening Areas -->
+  <section>
+    <h2>Key Areas of Linux Hardening</h2>
+
+    <details>
+      <summary>User and Access Management</summary>
+      <p>
+        Clear identity boundaries ensure accountability and limit abuse. Individual
+        accounts, restricted privilege escalation, and minimal group membership are
+        essential.
+      </p>
+    </details>
+
+    <details>
+      <summary>File System and Permission Hygiene</summary>
+      <p>
+        Least-privilege permissions, restricted system directories, and separation of
+        data, logs, and system files reduce the impact of misuse or compromise.
+      </p>
+    </details>
+
+    <details>
+      <summary>Service and Process Control</summary>
+      <p>
+        Every running service increases exposure. Disabling unused services, enforcing
+        low privileges, and isolating risky processes limits attacker options.
+      </p>
+    </details>
+
+    <details>
+      <summary>Network Configuration</summary>
+      <p>
+        Restricting traffic, disabling unused protocols, and monitoring listening
+        services limits pathways into the system.
+      </p>
+    </details>
+
+    <details>
+      <summary>System Updates and Patch Discipline</summary>
+      <p>
+        Regular updates and supported distributions prevent known vulnerabilities
+        from remaining exploitable.
+      </p>
+    </details>
+
+    <details>
+      <summary>Logging and Monitoring</summary>
+      <p>
+        Visibility enables detection. Logs, integrity checks, and anomaly monitoring
+        turn a static system into an observable one.
+      </p>
+    </details>
+
+    <details>
+      <summary>Secure Remote Access</summary>
+      <p>
+        Remote access must be limited, encrypted, auditable, and restricted to
+        necessary users and networks.
+      </p>
+    </details>
+
+    <details>
+      <summary>Application Isolation and Sandboxing</summary>
+      <p>
+        Containers, mandatory access controls, and syscall restrictions reduce the
+        blast radius of compromised applications.
+      </p>
+    </details>
+  </section>
+
+  <!-- Impact -->
+  <section>
+    <h2>Real-World Impact</h2>
+    <ul>
+      <li>Unauthorized access from weak credentials</li>
+      <li>Privilege escalation due to permission errors</li>
+      <li>Data exposure from open services</li>
+      <li>Persistence mechanisms left behind by attackers</li>
+      <li>Lateral movement within internal networks</li>
+    </ul>
+
+    <p>
+      Well-hardened systems increase attacker effort, improve detection, and limit
+      the scope of damage.
+    </p>
+  </section>
+
+  <!-- Beginner Guidance -->
+  <section>
+    <h2>What Beginners Should Understand</h2>
+    <ul>
+      <li>Hardening is an ongoing process</li>
+      <li>Security decisions should be documented and repeatable</li>
+      <li>Understanding Linux internals improves defensive design</li>
+      <li>The goal is resilience, not perfection</li>
+    </ul>
+  </section>
+
+  <!-- Conceptual Exercise -->
+  <section class="lab-callout">
+    <h2>Conceptual Exercise</h2>
+    <p>
+      Take a simple Linux system and list its users, services, and network exposure.
+      Identify which components require trust and which could be isolated or removed.
+      This builds intuition without relying on specific tools.
+    </p>
+  </section>
+
+  <!-- References -->
+  <section class="references">
+    <h2>References</h2>
+    <ul>
+      <li>Red Hat — Linux Security Fundamentals</li>
+      <li>Ubuntu Security Documentation — Hardening and Best Practices</li>
+      <li>Linux Foundation — Introduction to Linux Security Concepts</li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer class="article-footer">
+    <p>
+      Part of the <strong>Nova Digital Knowledge Base</strong><br>
+      Security-first • System-aware • Resilience-driven
+    </p>
+  </footer>
+
+</article>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="../../assets/js/main.js"></script>
+
+</body>
+</html>

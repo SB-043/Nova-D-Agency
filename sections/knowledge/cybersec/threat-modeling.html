@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="An introduction to threat modeling fundamentals, explaining how to identify assets, threats, trust boundaries, and prioritize security risks." />
+
+  <title>Threat Modeling Fundamentals — Nova Digital Knowledge</title>
+
+  <!-- Base & Section Styles -->
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/style1.css">
+
+  <!-- Article-specific styles -->
+  <link rel="stylesheet" href="../../assets/css/article.css">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+<article class="knowledge-article">
+
+  <!-- Header -->
+  <header class="article-header">
+    <h1>Threat Modeling Fundamentals</h1>
+    <p class="article-subtitle">
+      Anticipating attacks by reasoning about systems and adversaries
+    </p>
+  </header>
+
+  <!-- Overview -->
+  <section>
+    <h2>Overview</h2>
+    <p>
+      Threat modeling sits at the intersection of architecture, security engineering,
+      and risk analysis. It provides a structured way to examine how a system could be
+      attacked, what assets are at risk, and which defensive measures matter most.
+    </p>
+    <p>
+      Rather than a checklist or compliance exercise, threat modeling is a way of
+      thinking about systems through the eyes of an adversary—challenging assumptions
+      before they become incidents.
+    </p>
+  </section>
+
+  <!-- Why It Matters -->
+  <section>
+    <h2>Why Threat Modeling Matters</h2>
+    <p>
+      Every system contains assumptions about trust, behavior, and component
+      interaction. Attackers exploit the gaps between those assumptions and reality.
+    </p>
+
+    <ul>
+      <li>Reveals how design decisions influence security exposure</li>
+      <li>Identifies risks early, when mitigation is cheaper</li>
+      <li>Prioritizes defenses based on realistic attacker goals</li>
+      <li>Builds shared understanding across engineering and security teams</li>
+    </ul>
+
+    <p>
+      Threat modeling is a proactive discipline—teams deliberately search for weaknesses
+      instead of waiting for vulnerabilities to surface.
+    </p>
+  </section>
+
+  <!-- Core Concepts -->
+  <section>
+    <h2>Core Concepts</h2>
+
+    <details>
+      <summary>Assets</summary>
+      <p>
+        Assets are the things worth protecting: data, services, credentials,
+        infrastructure, or business processes. Threat modeling begins by identifying
+        what matters most.
+      </p>
+    </details>
+
+    <details>
+      <summary>Threats</summary>
+      <p>
+        A threat is any event or actor capable of exploiting a vulnerability to harm
+        an asset. Threats may be intentional or unintentional.
+      </p>
+    </details>
+
+    <details>
+      <summary>Attackers and Goals</summary>
+      <p>
+        Understanding attacker motivation—data theft, privilege escalation, financial
+        gain, or disruption—helps prioritize realistic risks.
+      </p>
+    </details>
+
+    <details>
+      <summary>Trust Boundaries</summary>
+      <p>
+        Trust boundaries mark transitions between components with different trust
+        levels. They are frequent sources of security weaknesses.
+      </p>
+    </details>
+
+    <details>
+      <summary>Assumptions</summary>
+      <p>
+        Systems rely on assumptions about users, networks, and components. Threat
+        modeling challenges these assumptions under adversarial conditions.
+      </p>
+    </details>
+  </section>
+
+  <!-- Process -->
+  <section>
+    <h2>How Threat Modeling Works</h2>
+
+    <ol>
+      <li>
+        <strong>Define the Scope:</strong> Identify the system, assets, actors, and
+        boundaries being analyzed.
+      </li>
+      <li>
+        <strong>Understand the System:</strong> Map data flows, components, and trust
+        boundaries using diagrams.
+      </li>
+      <li>
+        <strong>Identify Threats:</strong> Apply structured analysis (e.g., STRIDE) to
+        uncover potential risks.
+      </li>
+      <li>
+        <strong>Analyze and Prioritize:</strong> Evaluate likelihood, impact, and
+        exploitability.
+      </li>
+      <li>
+        <strong>Recommend Mitigations:</strong> Propose controls such as authentication,
+        validation, segmentation, or monitoring.
+      </li>
+      <li>
+        <strong>Validate and Iterate:</strong> Update the model as systems evolve.
+      </li>
+    </ol>
+  </section>
+
+  <!-- Approaches -->
+  <section>
+    <h2>Common Threat Modeling Approaches</h2>
+
+    <details>
+      <summary>STRIDE</summary>
+      <p>
+        Categorizes threats into six types, providing a systematic way to analyze
+        system components and data flows.
+      </p>
+    </details>
+
+    <details>
+      <summary>Attack Trees</summary>
+      <p>
+        Visualize how an attacker could achieve a goal through multiple paths and
+        dependencies.
+      </p>
+    </details>
+
+    <details>
+      <summary>Kill Chain / ATT&CK-Inspired Analysis</summary>
+      <p>
+        Focuses on attacker behavior and stages of intrusion to understand progression
+        through a system.
+      </p>
+    </details>
+
+    <details>
+      <summary>Risk-Driven Models</summary>
+      <p>
+        Prioritize threats based on business impact and operational risk rather than
+        technical categorization.
+      </p>
+    </details>
+  </section>
+
+  <!-- Impact -->
+  <section>
+    <h2>Real-World Impact</h2>
+    <ul>
+      <li>Over-trusting internal network traffic</li>
+      <li>Missing authentication between services</li>
+      <li>Sensitive data crossing boundaries unencrypted</li>
+      <li>Excessive privileges granted to background processes</li>
+      <li>Design assumptions that fail under attack</li>
+    </ul>
+  </section>
+
+  <!-- Beginner Guidance -->
+  <section>
+    <h2>What Beginners Should Understand</h2>
+    <ul>
+      <li>Threat modeling is about reasoning, not tooling</li>
+      <li>Simple, useful models outperform complex unused ones</li>
+      <li>Collaboration improves model quality</li>
+      <li>Iteration is expected as systems evolve</li>
+      <li>The goal is risk understanding, not risk elimination</li>
+    </ul>
+  </section>
+
+  <!-- Callout -->
+  <section class="lab-callout">
+    <h2>Conceptual Exercise</h2>
+    <p>
+      Choose a simple system and sketch its components and data flows. Identify trust
+      boundaries and question assumptions. Consider how an attacker might cross those
+      boundaries and what defenses would matter most.
+    </p>
+  </section>
+
+  <!-- References -->
+  <section class="references">
+    <h2>References</h2>
+    <ul>
+      <li>Microsoft Learn — Threat Modeling Security Fundamentals</li>
+      <li>Salesforce Trailhead — Threat Modeling Fundamentals</li>
+      <li>Microsoft Engineering Playbook — Threat Modeling Overview</li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer class="article-footer">
+    <p>
+      Part of the <strong>Nova Digital Knowledge Base</strong><br>
+      Security-first • Architecture-aware • Risk-driven
+    </p>
+  </footer>
+
+</article>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="../../assets/js/main.js"></script>
+
+</body>
+</html>
