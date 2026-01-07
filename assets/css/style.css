@@ -26,7 +26,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
-  background-color: #1b1533;
+  background-color: #05063b;
   transition: background 0.3s ease, color 0.3s ease;
   color: whitesmoke;
   height: auto;
@@ -590,6 +590,7 @@ body {
   transform: translateY(-2px);
   filter: drop-shadow(0 0 6px rgba(138, 99, 255, 0.35));
 }
+
 
 
 
