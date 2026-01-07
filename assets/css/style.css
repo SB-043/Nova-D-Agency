@@ -1,14 +1,11 @@
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 * {
   -webkit-tap-highlight-color: transparent;
 }
-
 :root {
   --bg-light: #f0f0f0;
   --bg-dark: #333;
@@ -23,8 +20,6 @@
   --text-muted: #b7b2ff;
   --accent: #7c5cff;
 }
-
-
 body {
   font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
   font-weight: 400;
@@ -595,6 +590,7 @@ body {
   transform: translateY(-2px);
   filter: drop-shadow(0 0 6px rgba(138, 99, 255, 0.35));
 }
+
 
 
 
