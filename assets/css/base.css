@@ -2,19 +2,39 @@
    DESIGN TOKENS
 ========================= */
 :root {
-  --bg-dark: #0b0618;
   --bg-panel: #141027;
   --accent: #8a63ff;
   --text-primary: #ffffff;
-  --text-muted: #b8b4d8;
-
   --radius-lg: 16px;
   --radius-md: 12px; 
-
   --transition-fast: 0.25s ease;
   --transition-slow: 0.4s ease;
-
   --font-main: 'Inter', system-ui, sans-serif;
+  --bg-light: #f0f0f0;
+  --bg-dark: #333;
+  --primary-color: #4a00e0;
+  --secondary-color: #8e2de2;
+  --sidebar-width: 220px;
+  --section-bg: #0f172a;
+  --section-text: #e5e7eb;
+  --bg-main: radial-gradient(circle at top, #1a1435, #0b071a);
+  --bg-card: rgba(255, 255, 255, 0.05);
+  --text-main: #eae7ff;
+  --text-muted: #b7b2ff;
+  --accent: #7c5cff;
+}
+body {
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  background-color: #1b1533;
+  transition: background 0.3s ease, color 0.3s ease;
+  color: whitesmoke;
+  height: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 /* =========================
@@ -44,3 +64,4 @@ body {
   text-align: center;
   margin-bottom: 1rem;
 }
+
