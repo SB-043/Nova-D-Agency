@@ -2,6 +2,24 @@
    SECTION PAGES — GLOBAL STYLES (style1.css)
    ====================================================== */
 
+body {
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  background-color: #1b1533;
+  transition: background 0.3s ease, color 0.3s ease;
+  color: whitesmoke;
+  height: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin: 0;
+  font-family: var(--font-main);
+  background: var(--bg-dark);
+  color: var(--text-primary);
+}
+
 /* Page wrapper */
 .page {
   min-height: 100vh;
@@ -342,3 +360,4 @@
     margin-top: 10px;
   }
 }
+
