@@ -73,6 +73,79 @@ Nova-D-Agency/
 ```
 
 ---
+# Future community-based structure
+```
+Nova-D-Agency/
+│
+├── public/                     # Public static assets
+│   ├── images/
+│   ├── icons/
+│   ├── fonts/
+│   └── favicon.ico
+│
+├── src/                        # Main source code
+│   │
+│   ├── components/             # Reusable UI components
+│   │   ├── navbar/
+│   │   ├── footer/
+│   │   ├── cards/
+│   │   ├── modals/
+│   │   └── buttons/
+│   │
+│   ├── pages/                  # Page-level views
+│   │   ├── home/
+│   │   ├── about/
+│   │   ├── community/
+│   │   ├── dashboard/
+│   │   ├── profile/
+│   │   ├── forum/
+│   │   ├── blog/
+│   │   └── auth/
+│   │
+│   ├── layouts/                # Shared layout wrappers
+│   │   ├── main-layout.html
+│   │   └── dashboard-layout.html
+│   │
+│   ├── styles/                 # Global & modular styles
+│   │   ├── base/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   └── utilities/
+│   │
+│   ├── scripts/                # JavaScript modules
+│   │   ├── api/
+│   │   ├── auth/
+│   │   ├── utils/
+│   │   ├── state/
+│   │   └── main.js
+│   │
+│   └── config/                 # App configuration
+│       └── settings.js
+│
+├── backend/                    # (Future backend integration)
+│   ├── controllers/
+│   ├── routes/
+│   ├── models/
+│   ├── middleware/
+│   └── server.js
+│
+├── database/                   # Database configs & migrations
+│   ├── migrations/
+│   ├── seeds/
+│   └── schema.sql
+│
+├── tests/                      # Unit & integration tests
+│   ├── frontend/
+│   └── backend/
+│
+├── .github/                    # CI/CD workflows
+│   └── workflows/
+│
+├── .env.example                # Environment variable template
+├── package.json                # Dependencies (future-ready)
+├── index.html                  # Entry (if still static-based)
+└── README.md
+```
 
 # Getting Started
 
